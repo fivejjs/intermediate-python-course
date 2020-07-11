@@ -2,11 +2,14 @@ import random
 
 
 def main():
-    print('You rolled a die')
+
+    dice_rolls = int(input('How many dice would you like to roll? '))
+    dice_size = int(input('How many sides are the dice? '))
+    
     dice_rolls = 2
     dice_sum = 0
     for i in range(dice_rolls):
-        roll = random.randint(1, 6)
+        roll = random.randint(1, dice_size)
         dice_sum += roll
         if roll == 1:
             print(f'You rolled a {roll}! Critical Fail')
